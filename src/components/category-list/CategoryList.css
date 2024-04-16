@@ -1,0 +1,27 @@
+.list--item--style {
+    list-style: none;
+    display: inline-block;
+    margin: 0.5rem 0rem;
+}
+
+.list--item--link--style {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: darkslategray;
+    padding: 0.5rem 0.5rem;
+    transition: all 1s;
+}
+
+.list--item--link--style:hover {
+    background-color: hsla(195, 83%, 58%, 0.2);
+    border-radius: 5rem;
+}
+
+/* Se achica el tamaño de la fuente del navbar por debajo de los 1000px */
+@media (max-width: 1000px) {
+    .list--item--link--style {
+        font-size: 1rem;
+    }
+}

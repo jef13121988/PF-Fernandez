@@ -1,0 +1,12 @@
+/* Reseteo de padding y margin */
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+/* Colores y estructura del Body */
+body {
+    font-family: "Open Sans", "Segoe UI", sans-serif;
+    background-color: black;
+    padding: 1rem;
+}

@@ -1,0 +1,16 @@
+.brand--style {
+    color: darkslategray;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+/* Se ajusta el tamaño de la fuente para pantallas menores a 440px */
+@media (max-width: 440px) {
+    .brand--style {
+        font-size: 1.3rem;
+    }
+}
