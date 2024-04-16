@@ -5,7 +5,7 @@ function CartWidget() {
     return (
         <div className="cart--style">
             <CartIcon size={"sm"} />
-            <span>5</span>
+            <span className='cart--amount--style'>5</span>
         </div>
     )
 }
