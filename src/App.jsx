@@ -1,6 +1,6 @@
-import './App.css'
-import Header from './container/header/Header'
-import MainHTML from './container/main-html/MainHTML'
+import './App.css';
+import Header from './container/header/Header';
+import MainHTML from './container/main-html/MainHTML';
 
 function App() {
   return (
@@ -11,4 +11,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

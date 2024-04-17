@@ -1,10 +1,10 @@
-import './NavBar.css'
-import CategoryList from "../category-list/CategoryList";
-import CartWidget from "../cart-widget/CartWidget";
+import './NavBar.css';
+import CategoryList from '../category-list/CategoryList';
+import CartWidget from '../cart-widget/CartWidget';
 
 function NavBar() {
     return (
-        <div className="navbar__style">
+        <div className='navbar__style'>
             <CategoryList />
             <CartWidget />
         </div>

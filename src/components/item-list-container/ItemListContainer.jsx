@@ -1,6 +1,10 @@
+import './ItemListContainer.css';
+
 function ItemListContainer() {
     return (
-        <div></div>
+        <div className='item--container--style'>
+            Fotos
+        </div>
     )
 }
 

@@ -3,13 +3,13 @@ function CartIcon({ size }) {
     let height;
     let width;
     
-    if ( size === "sm" ){
+    if ( size === 'sm' ){
         height = 30;
         width = 30;
-    }else if ( size === "md" ){
+    }else if ( size === 'md' ){
         height = 40;
         width = 40;
-    }else if ( size === "lg" ){
+    }else if ( size === 'lg' ){
         height = 50;
         width = 50;
     }
