@@ -3,7 +3,7 @@ import ItemListContainer from '../../components/item-list-container/ItemListCont
 function MainHTML() {
     return (
         <main>
-            <ItemListContainer />
+            <ItemListContainer greeting={'Bienvenid@ a la landing page'} />
         </main>
     )
 }
