@@ -1,12 +1,16 @@
-import Header from '../header/Header';
+import Brand from '../../components/brand/Brand';
+import NavBar from '../../components/navbar/NavBar';
 import Footer from '../footer/Footer';
 import './Layout.css';
 
 function Layout({ children }) {
     return (
         <div>
-            <Header />
-            <main className="main--container">{children}</main>
+            <header className='header__style'>
+                <Brand />
+                <NavBar />
+            </header>
+            <main className="main__style">{children}</main>
             <Footer />
         </div>
     );
