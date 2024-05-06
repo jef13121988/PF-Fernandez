@@ -1,9 +1,9 @@
-.item--container--style {
+.item__container {
     background-color: #00008B;
     text-align: center;
 }
 
-.greeting--style {
+.greeting__style {
     font-size: 3rem;
     color: darkslategray;
     background-color: #010163;

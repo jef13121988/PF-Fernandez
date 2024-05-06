@@ -1,20 +1,21 @@
 import './CategoryList.css';
+import { NavLink } from 'react-router-dom';
 
 function CategoryList() {
     return (
         <nav>
-            <ul>
-                <li className='list--item--style'>
-                    <a className='list--item--link--style' href='/#'> Inicio </a>
+            <ul className='list__item'>
+                <li>
+                    <NavLink className={({isActive}) => isActive ? 'link__active' : '' } to={"/"}> Inicio </NavLink>
                 </li>
-                <li className='list--item--style'>
-                    <a className='list--item--link--style' href='/#'> Raza </a>
+                <li>
+                    <NavLink className={({isActive}) => isActive ? 'link__active' : '' } to={"/rogue"}> Rogue </NavLink>
                 </li>
-                <li className='list--item--style'>
-                    <a className='list--item--link--style' href='/#'> Clase </a>
+                <li>
+                    <NavLink className={({isActive}) => isActive ? 'link__active' : '' } to={"/guerrero"}> Guerrero </NavLink>
                 </li>
-                <li className='list--item--style'>
-                    <a className='list--item--link--style' href='/#'> Género </a>
+                <li>
+                    <NavLink className={({isActive}) => isActive ? 'link__active' : '' } to={"/barbaro"}> Bárbaro </NavLink>
                 </li>
             </ul>
         </nav>

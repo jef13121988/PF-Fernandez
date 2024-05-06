@@ -1,17 +1,22 @@
-.brand--style {
+.brand__style {
     display: flex;
     flex-direction: column;
-    color: darkslategray;
     font-weight: bold;
     text-transform: uppercase;
     padding: 1rem;
 }
 
-.title--style {
+.brand__title {
+    color: #fafafa;
+    text-decoration: none;
+    background-color: darkslategray;
+    border-radius: 100rem;
     font-size: 3rem;
+    padding: 0px 10px;
 }
 
-.subtitle--style {
+.brand__subtitle {
+    color: #fafafa;
     font-size: 1.5rem;
     align-self: end;
 }
@@ -19,11 +24,11 @@
 /* Se ajusta el tamaño de la fuente para pantallas menores a 440px */
 @media (max-width: 440px) {
 
-    .title--style {
+    .brand__title {
         font-size: 2.6rem;
     }
     
-    .subtitle--style {
+    .brand__subtitle {
         font-size: 1.3rem;
     }
 

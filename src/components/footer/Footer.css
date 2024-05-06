@@ -4,8 +4,8 @@
     position: sticky;
     z-index: 10;
     background-color: #000000c0;
-    border-top: 1px solid darkblue;
+    border-top: 1px solid #fafafa;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
 }

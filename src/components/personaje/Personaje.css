@@ -1,0 +1,13 @@
+.personaje__text {
+    color: white;
+}
+
+.personaje__container {
+    border: 3px solid darkslategray;
+    background-color: #000411;
+}
+
+.personaje__img {
+    width: 200px;
+    height: 200px;
+}

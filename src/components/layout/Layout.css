@@ -2,14 +2,36 @@
     padding: 1rem 2rem;
     position: sticky;
     z-index: 10;
-    background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);;
-    background-color: #131313;
-    background-size: 1rem 1rem;
+    background: url('/public/fondo.webp');
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.main__style{
+.main__style {
     background-color: black;
+}
+
+/* Estilo H1 */
+
+h1 {
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        padding: 1rem;
+
+        /* Fondo especial para títulos */
+        background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+        background-color: #131313;
+        background-size: 1rem 1rem;
+}
+
+/* Se ajusta el tamaño de la fuente para pantallas menores a 440px */
+@media (max-width: 440px) {
+    h1 {
+        font-size: 1.3rem;
+    }
 }

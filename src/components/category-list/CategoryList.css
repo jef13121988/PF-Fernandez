@@ -1,27 +1,36 @@
-.list--item--style {
+.list__item li {
     list-style: none;
     display: inline-block;
     margin: 0.5rem 0rem;
 }
 
-.list--item--link--style {
+.list__item li a {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1.25rem;
-    color: darkslategray;
+    color: #fafafa;
     padding: 0.5rem 0.5rem;
     transition: all 1s;
 }
 
-.list--item--link--style:hover {
+.link__active {
+    background-color: darkslategray;
+    border-radius: 5rem;
+}
+
+.list__item li a:hover {
     background-color: hsla(195, 83%, 58%, 0.2);
     border-radius: 5rem;
 }
 
+.link__active:hover {
+    background-color: rgb(31, 51, 51);
+}
+
 /* Se achica el tamaño de la fuente del navbar por debajo de los 1000px */
 @media (max-width: 1000px) {
-    .list--item--link--style {
+    .list__item li a {
         font-size: 1rem;
     }
 }
