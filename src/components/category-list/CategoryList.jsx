@@ -9,13 +9,13 @@ function CategoryList() {
                     <NavLink className={({isActive}) => isActive ? 'link__active' : '' } to={"/"}> Inicio </NavLink>
                 </li>
                 <li>
-                    <NavLink className={({isActive}) => isActive ? 'link__active' : '' } to={"/rogue"}> Rogue </NavLink>
+                    <NavLink className={({isActive}) => isActive ? 'link__active' : '' } to={"/clase/rogue"}> Rogue </NavLink>
                 </li>
                 <li>
-                    <NavLink className={({isActive}) => isActive ? 'link__active' : '' } to={"/guerrero"}> Guerrero </NavLink>
+                    <NavLink className={({isActive}) => isActive ? 'link__active' : '' } to={"/clase/guerrero"}> Guerrero </NavLink>
                 </li>
                 <li>
-                    <NavLink className={({isActive}) => isActive ? 'link__active' : '' } to={"/barbaro"}> Bárbaro </NavLink>
+                    <NavLink className={({isActive}) => isActive ? 'link__active' : '' } to={"/clase/barbaro"}> Bárbaro </NavLink>
                 </li>
             </ul>
         </nav>

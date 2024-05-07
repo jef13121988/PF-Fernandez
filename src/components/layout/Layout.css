@@ -2,7 +2,7 @@
     padding: 1rem 2rem;
     position: sticky;
     z-index: 10;
-    background: url('/public/fondo.webp');
+    background: url('/fondo.webp');
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -10,6 +10,7 @@
 
 .main__style {
     background-color: black;
+    margin-bottom: 2rem;
 }
 
 /* Estilo H1 */

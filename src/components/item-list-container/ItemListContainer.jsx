@@ -1,10 +1,16 @@
-import './ItemListContainer.css';
+import { useParams } from 'react-router-dom';
+import usePersonajesByClase from '../../hooks/usePersonajesByClase';
+import PersonajeList from "../personaje-list/PersonajeList";
 
-function ItemListContainer({greeting}) {
+function ItemListContainer() {
+    const { claseId } = useParams();
+    const { personajes, isLoading } = usePersonajesByClase( claseId );
+    if ( isLoading ) return <h1> Cargando... </h1>;
+
     return (
-        <div className='item__container'>
-            <h1 className='greeting__style'>{greeting}</h1>
-            <a href="https://jef13121988.github.io/ProyectoFinal-JavaScript/"> Clickee aquí para acceder a la web a la que hace referencia este proyecto </a>
+        <div>
+            <h1> {claseId} </h1>
+            <PersonajeList personajes={ personajes } />
         </div>
     )
 }
