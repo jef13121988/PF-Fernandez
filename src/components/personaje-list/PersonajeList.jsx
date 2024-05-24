@@ -7,7 +7,7 @@ function PersonajeList( { personajes } ) {
     return (
         <div className="personaje__list__container">
             { personajes.map( ( personaje ) => (
-                <Link to={`/personaje/${personaje.id}`}>
+                <Link to={`/personaje/${personaje.id}`} className="personaje__list__link">
                     <Personaje key={ personaje.id } personaje={ personaje } />
                 </Link>
             ))}
