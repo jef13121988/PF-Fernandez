@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import useEquipos from '../../hooks/useEquipos';
 import EquipoList from "../equipo-list/EquipoList";
 
-function ItemListContainer() {
+function EquipoListContainer() {
     const { categoryId } = useParams();
     const { equipos, isLoading } = useEquipos( categoryId );
     if ( isLoading ) return <h1> Cargando... </h1>;
@@ -15,4 +15,4 @@ function ItemListContainer() {
     )
 }
 
-export default ItemListContainer;
+export default EquipoListContainer;
