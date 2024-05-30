@@ -7,5 +7,10 @@
     border-top: 1px solid #fafafa;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: space-between;
+}
+
+.link__style {
+    text-decoration: none;
+    color: #fafafa;
 }

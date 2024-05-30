@@ -1,5 +1,6 @@
 .equipo__text {
     color: white;
+    text-align: center;
 }
 
 .equipo__container {
@@ -7,13 +8,23 @@
     background-color: #000411;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+    width: 250px;
+    height: 100%;
+}
+
+.equipo__container:hover {
+    border: 3px solid #fafafa;
 }
 
 .equipo__img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
+}
+
+.equipo__img:hover {
+    opacity: 50%;
 }
 
 .equipo__img__container {
