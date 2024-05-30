@@ -9,13 +9,10 @@ function CategoryList() {
                     <NavLink className={({isActive}) => isActive ? 'link__active' : '' } to={"/"}> Inicio </NavLink>
                 </li>
                 <li>
-                    <NavLink className={({isActive}) => isActive ? 'link__active' : '' } to={"/clase/rogue"}> Rogue </NavLink>
+                    <NavLink className={({isActive}) => isActive ? 'link__active' : '' } to={"/category/armas"}> Armas </NavLink>
                 </li>
                 <li>
-                    <NavLink className={({isActive}) => isActive ? 'link__active' : '' } to={"/clase/guerrero"}> Guerrero </NavLink>
-                </li>
-                <li>
-                    <NavLink className={({isActive}) => isActive ? 'link__active' : '' } to={"/clase/barbaro"}> Bárbaro </NavLink>
+                    <NavLink className={({isActive}) => isActive ? 'link__active' : '' } to={"/category/varios"}> Varios </NavLink>
                 </li>
             </ul>
         </nav>

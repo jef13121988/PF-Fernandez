@@ -1,0 +1,22 @@
+.equipo__text {
+    color: white;
+}
+
+.equipo__container {
+    border: 3px solid darkslategray;
+    background-color: #000411;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.equipo__img {
+    width: 200px;
+    height: 200px;
+}
+
+.equipo__img__container {
+    display: flex;
+    justify-content: center;
+}

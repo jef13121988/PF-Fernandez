@@ -1,6 +1,6 @@
 //import { useEffect, useState } from "react";
 
-const listaPersonajes = async () => {
+const listaEquipos = async () => {
     try {
         // Indico la ruta del json
         const endPoint = '/data.json';
@@ -16,21 +16,20 @@ const listaPersonajes = async () => {
     };
 };
 
-export const getPersonajes = () => {
+export const getEquipos = () => {
 
-    return listaPersonajes().then( ( personajes ) => personajes );
-
-};
-
-export const getPersonajesById = ( id ) => {
-
-    return listaPersonajes().then( ( personajes ) => personajes.find( ( personaje ) => personaje.id === parseInt(id) ) );
+    return listaEquipos().then( ( equipos ) => equipos );
 
 };
 
-export const getPersonajesByClase = ( claseId ) => {
-    const nuevaClaseId = claseId == "barbaro" ? "bárbaro" : claseId;
+export const getEquiposById = ( id ) => {
 
-    return listaPersonajes().then( ( personajes ) => personajes.filter( ( personaje ) => personaje.clase.toLowerCase() === nuevaClaseId ) );
+    return listaEquipos().then( ( equipos ) => equipos.find( ( equipo ) => equipo.id === parseInt(id) ) );
+
+};
+
+export const getEquiposByCategory = ( categoryId ) => {
+
+    return listaEquipos().then( ( equipos ) => equipos.filter( ( equipo ) => equipo.categoria.toLowerCase() === categoryId ) );
     
 };

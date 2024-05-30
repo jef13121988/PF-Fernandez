@@ -1,16 +1,16 @@
 import { useParams } from 'react-router-dom';
-import usePersonajesByClase from '../../hooks/usePersonajesByClase';
-import PersonajeList from "../personaje-list/PersonajeList";
+import useEquipos from '../../hooks/useEquipos';
+import EquipoList from "../equipo-list/EquipoList";
 
 function ItemListContainer() {
-    const { claseId } = useParams();
-    const { personajes, isLoading } = usePersonajesByClase( claseId );
+    const { categoryId } = useParams();
+    const { equipos, isLoading } = useEquipos( categoryId );
     if ( isLoading ) return <h1> Cargando... </h1>;
 
     return (
         <div>
-            <h1> {claseId} </h1>
-            <PersonajeList personajes={ personajes } />
+            <h1> {categoryId ? categoryId : "Inicio"} </h1>
+            <EquipoList equipos={ equipos } />
         </div>
     )
 }

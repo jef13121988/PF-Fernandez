@@ -1,18 +1,18 @@
 import './SingleContainer.css'
 import { useParams } from 'react-router-dom';
-import usePersonajesById from '../../hooks/usePersonajesById';
-import Personaje from "../personaje/Personaje";
+import useEquiposById from '../../hooks/useEquiposById';
+import Equipo from "../equipo/Equipo";
 
 function SingleContainer() {
     const { id } = useParams();
-    const { personaje, isLoading } = usePersonajesById( id );
+    const { equipo, isLoading } = useEquiposById( id );
     if ( isLoading ) return <h1> Cargando... </h1>;
 
     return (
         <div>
-            <h1> Personaje n°{id} </h1>
+            <h1> Equipo n°{id} </h1>
             <div className='single__container'>
-                <Personaje personaje={ personaje } />
+                <Equipo equipo={ equipo } />
             </div>
         </div>
     )
