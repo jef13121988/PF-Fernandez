@@ -1,0 +1,25 @@
+.equipo__contar__container {
+    color: #fafafa;
+    text-align: center;
+    margin: 1rem;
+}
+
+.equipo__contar__button {
+    color: #fafafa;
+    background-color: darkslategray;
+    border: none;
+    padding: 5px 10px;
+    margin: 0px 10px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.equipo__contar__button:disabled {
+    opacity: 50%;
+    cursor: default;
+}
+
+.equipo__contar__text {
+    font-weight: bold;
+    font-size: 1rem;
+}

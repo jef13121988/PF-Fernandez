@@ -56,3 +56,25 @@
     text-align: center;
     font-size: 0.9rem;
 }
+
+.equipo__detail__cart__container {
+    text-align: center;
+}
+
+.equipo__detail__cart {
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #fafafa;
+    font-weight: bold;
+    background-color: darkslategray;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.equipo__detail__cart:disabled {
+    opacity: 75%;
+    cursor: default;
+}
