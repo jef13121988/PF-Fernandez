@@ -1,0 +1,10 @@
+.cart__details__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart__details__text {
+    color: #fafafa;
+    margin: 10px;
+}

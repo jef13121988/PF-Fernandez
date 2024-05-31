@@ -7,14 +7,16 @@ function EquipoContar( { stock, contar, agregar, sacar } ) {
         <button
             className="equipo__contar__button equipo__contar__text"
             onClick={ sacar }
-            disabled={ contar <= 0 }>
+            disabled={ contar <= 0 }
+            type="button">
             -
         </button>
         <span className="equipo__contar__text">{ contar }</span>
         <button
             className="equipo__contar__button equipo__contar__text"
             onClick={ agregar }
-            disabled={ contar >= stock }>
+            disabled={ contar >= stock }
+            type="button">
             +
         </button>
       </div>
