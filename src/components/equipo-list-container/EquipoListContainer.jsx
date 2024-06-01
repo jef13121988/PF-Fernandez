@@ -19,7 +19,7 @@ function EquipoListContainer() {
 
     return (
         <div>
-            <h1> { id ? id : "Inicio" } </h1>
+            <h1> { id ? id : "¡Bienvenid@!" } </h1>
             <div className="equipo__list__container">
                 { categoryId ? (
                     categoryArray.map( ( subcategory ) => (
