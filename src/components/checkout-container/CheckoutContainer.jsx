@@ -1,3 +1,4 @@
+import './CheckoutContainer.css';
 import { useContext } from "react";
 import { addDoc, collection, doc, getDoc, getFirestore, updateDoc } from "firebase/firestore";
 import CartContext from "../../contexts/CartContext";
@@ -60,71 +61,71 @@ function CheckoutContainer() {
 
     return (
         <div>
-            <form onSubmit={handleSubmit} className="">
-                <div className="">
-                    <label htmlFor="nombre">Nombre</label>
-                    <input
-                        type="text"
-                        placeholder="Nombre del comprador"
-                        className=""
-                        name="nombre"
-                        value={comprador.nombre}
-                        onChange={handleInputChange}
-                    />
+            <h1>Formulario de compra</h1>
+            <form onSubmit={handleSubmit} className="form__style">
+                <div className="checkout__container">
+                    <div className="">
+                        <label className="label__style" htmlFor="nombre">Nombre</label>
+                        <input
+                            type="text"
+                            placeholder="Nombre del comprador"
+                            className="input__style"
+                            id="nombre"
+                            name="nombre"
+                            value={comprador.nombre}
+                            onChange={handleInputChange}
+                        />
+                        <label className="label__style" htmlFor="apellido">Apellido</label>
+                        <input
+                            type="text"
+                            placeholder="Apellido del comprador"
+                            className="input__style"
+                            id="apellido"
+                            name="apellido"
+                            value={comprador.apellido}
+                            onChange={handleInputChange}
+                        />
+                        <label className="label__style" htmlFor="telefono">Teléfono</label>
+                        <input
+                            type="text"
+                            placeholder="Teléfono del comprador"
+                            className="input__style"
+                            id="telefono"
+                            name="telefono"
+                            value={comprador.telefono}
+                            onChange={handleInputChange}
+                        />
+                        <label className="label__style" htmlFor="email">Email</label>
+                        <input
+                            type="email"
+                            placeholder="Reingrese su email"
+                            className="input__style"
+                            id="email"
+                            name="email"
+                            value={comprador.email}
+                            onChange={handleInputChange}
+                        />
+                        <label className="label__style" htmlFor="emailControl">Repetir Email</label>
+                        <input
+                            type="email"
+                            placeholder="Reingrese su email"
+                            className="input__style"
+                            id="emailControl"
+                            name="emailControl"
+                            value={comprador.emailControl}
+                            onChange={handleInputChange}
+                        />
+                        { ( ( comprador.email != comprador.emailControl ) && ( comprador.email.length > 0 ) ) ? <p className="error__style"> El email no coincide </p> : <p className="error__style">   </p> }
+                        <button
+                            className="buy__button__style"
+                            disabled={ comprador.nombre.length < 1 || comprador.apellido.length < 1 || comprador.telefono.length < 1 || comprador.email.length < 1 || comprador.email != comprador.emailControl }
+                            type="submit"
+                            >
+                            Comprar
+                        </button>
+                    </div>
+                    <CartDetails cart={cart} getCartTotal={getCartTotal} sumQuantity={sumQuantity} />
                 </div>
-                <div className="">
-                    <label htmlFor="apellido">Apellido</label>
-                    <input
-                        type="text"
-                        placeholder="Apellido del comprador"
-                        className=""
-                        name="apellido"
-                        value={comprador.apellido}
-                        onChange={handleInputChange}
-                    />
-                </div>
-                <div className="">
-                    <label htmlFor="telefono">Teléfono</label>
-                    <input
-                        type="text"
-                        placeholder="Teléfono del comprador"
-                        className=""
-                        name="telefono"
-                        value={comprador.telefono}
-                        onChange={handleInputChange}
-                    />
-                </div>
-                <div className="">
-                    <label htmlFor="email1">Email</label>
-                    <input
-                        type="email"
-                        placeholder="Reingrese su email"
-                        className=""
-                        name="email"
-                        value={comprador.email}
-                        onChange={handleInputChange}
-                    />
-                </div>
-                <div className="">
-                    <label htmlFor="emailControl">Reingresar Email</label>
-                    <input
-                        type="email"
-                        placeholder="Reingrese su email"
-                        className=""
-                        name="emailControl"
-                        value={comprador.emailControl}
-                        onChange={handleInputChange}
-                    />
-                </div>
-                { ( ( comprador.email != comprador.emailControl ) && ( comprador.email.length > 0 ) ) ? <p> El email no coincide </p> : <p>   </p> }
-                <CartDetails cart={cart} getCartTotal={getCartTotal} sumQuantity={sumQuantity} />
-                <button
-                    className=""
-                    disabled={ comprador.nombre.length < 1 || comprador.apellido.length < 1 || comprador.telefono.length < 1 || comprador.email.length < 1 || comprador.email != comprador.emailControl }
-                    type="submit"
-                    >
-                    Comprar
-                </button>
             </form>
         </div>
     );
