@@ -1,17 +1,31 @@
 import { useEffect, useState } from "react";
-import { getEquiposById } from "../mock/asyncMock";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 function useEquiposById( id ) {
-    const [ equipo, setEquipos ] = useState();
+    const [ equipo, setEquipo ] = useState();
     const [ isLoading, setIsLoading ] = useState(true);
 
     useEffect( () => {
-        getEquiposById( id )
-        .then( ( data ) => setEquipos( data ) )
-        .finally( () => setIsLoading( false ) );
-    }, []);
+        const db = getFirestore();
+        const equipoPorId = doc( db, "equipos", id );
 
-    return { equipo, isLoading };
+        getDoc( equipoPorId )
+            .then( ( doc )  => {
+                if ( doc.exists() ) {
+                    setEquipo({
+                        id: doc.id,
+                        ...doc.data(),
+                    });
+                    
+                } else {
+                    alert("No such document!");
+                }
+            })
+            .finally(() => setIsLoading( false ) );
+
+    }, [ id ]);
+    
+        return { equipo, isLoading };
 }
 
 export default useEquiposById;

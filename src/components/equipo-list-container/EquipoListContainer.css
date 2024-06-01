@@ -1,0 +1,20 @@
+.equipo__list__container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.equipo__list__container__button {
+    color: skyblue;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: underline;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.equipo__list__container__button:hover {
+    color: #fafafa;
+}

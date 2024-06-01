@@ -1,22 +1,47 @@
 import { useEffect, useState } from "react";
-import { getEquipos, getEquiposByCategory } from "../mock/asyncMock";
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 
-function useEquipos( categoryId ) {
+function useEquipos( [ id, string ] ) {
     const [ equipos, setEquipos ] = useState([]);
     const [ isLoading, setIsLoading ] = useState(true);
 
     useEffect( () => {
-        if ( categoryId ) {
-            getEquiposByCategory( categoryId )
-            .then( ( data ) => setEquipos( data ) )
-            .finally( () => setIsLoading( false ) );
+        setIsLoading(true);
+        const db = getFirestore();
+        const equiposCollection = collection( db, "equipos" );
+
+        if ( id ) {
+            const capitalizedId = id[0].toUpperCase() + id.slice(1);
+
+            const equiposQuery = query(
+                equiposCollection,
+                where( ( string == "cat" ? "categoria" : "subcategoria" ), "==", capitalizedId )
+            );
+            
+            getDocs( equiposQuery )
+                .then( ( snapshot ) => {
+                    setEquipos(
+                        snapshot.docs.map( ( doc ) => (
+                            { id: doc.id, ...doc.data() }
+                        ))
+                    );
+                })
+                .finally( () => setIsLoading( false ) );
+
         } else {
-            getEquipos()
-            .then( ( data ) => setEquipos( data ) )
-            .finally( () => setIsLoading( false ) );
+            getDocs( equiposCollection )
+                .then( ( snapshot ) => {
+                    setEquipos(
+                        snapshot.docs.map( ( doc ) => (
+                            { id: doc.id, ...doc.data() }
+                        ))
+                    );
+                })
+                .finally( () => setIsLoading( false ) );
+
         }
         
-    }, [categoryId]);
+    }, [ id ]);
 
 
     return { equipos, isLoading };

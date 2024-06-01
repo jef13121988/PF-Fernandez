@@ -3,8 +3,8 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-  }
+}
 
-  .equipo__list__link {
-    text-decoration: none;
-  }
+.equipo__list__link {
+  text-decoration: none;
+}

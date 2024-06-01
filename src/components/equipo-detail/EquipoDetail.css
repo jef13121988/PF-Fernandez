@@ -16,7 +16,7 @@
 }
 
 .equipo__detail__title {
-    color: white;
+    color: #fafafa;
     text-decoration: underline;
     text-align: center;
     font-size: 2rem;
@@ -25,13 +25,13 @@
 }
 
 .equipo__detail__text {
-    color: white;
+    color: #fafafa;
     font-size: 1rem;
     margin-left: 0.5rem;
 }    
 
 .equipo__detail__description {
-    color: white;
+    color: #fafafa;
     background-color: #1f1f1f;
     align-items: center;
     padding: 0.5rem;
